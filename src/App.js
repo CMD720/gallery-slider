@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.css'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from "./Home/Home";
+import Gallery from "./Gallery/Gallery";
+import Slider from "./Slider/Slider";
+import Navigation from "./Nvagation/Navigation";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [data , setData] = useState([])
 
+    const createData=(fileList) =>{
+        setData(fileList)
+    }
+
+    return (
+        <div className="app">
+            <BrowserRouter>
+                <Navigation/>
+                <div className="container-app">
+                    <Routes>
+                        <Route index  element={<Home data={createData}/>}/>
+                        <Route path='/slider' element={<Slider data={data}/>}/>
+                        <Route path='/gallery' element={<Gallery data={data}/>}/>
+                        {/*<Route path='/example' element={<EventExample/>}/>*/}
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </div>
+    );
+};
 export default App;

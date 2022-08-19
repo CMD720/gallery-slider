@@ -1,0 +1,74 @@
+.card {
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    border: 2px solid navajowhite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+    cursor: grab;
+    display: flex;
+}
+
+.card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.element{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.delete{
+    border: 3px solid red;
+    color: navajowhite;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.basket{
+    border: 3px solid #55ff00;
+    color: navajowhite;
+    margin-right: 100px;
+    margin-left: 100px;
+    position: relative;
+    cursor: pointer;
+}
+.card__btn{
+    width: 100%;
+    height: 30px;
+    border: 3px solid navajowhite;
+    border-radius: 10px;
+    color: #a8a7a7;
+    font-size: 19px;
+    cursor: pointer;
+    align-self: flex-end;
+    background: white;
+}
+.elem__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.card__count{
+    position: absolute;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: black;
+    top: -9px;
+    right: -9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,63 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.modal__content{
+    padding: 20px;
+    border-radius: 16px;
+    background-color: white;
+    width: 50vw;
+    transform: scale(0.5);
+    transition: all 0.4s;
+}
+.modal__content.active {
+    transform: scale(1);
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.card__basket__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card__basket {
+    width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    border: 2px solid navajowhite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+    display: flex;
+    position: relative;
+}
+.card__basket__count{
+    position: absolute;
+    color: black;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: white;
+    top: -7px;
+    right: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
