@@ -37,7 +37,7 @@ const InputFiles = ({data}) => {
         <div style={{paddingTop:"35px", color:"white", background:"black"}}>
             <label>
                 <input type="file" multiple ref={selectInput} onChange={start}></input>
-            <div className={'choice__file'}><span>Выберите файлы</span></div></label>
+            <div className={'choice__file'}><span>Select files</span></div></label>
         </div>
     );
 };
